@@ -10,47 +10,58 @@
   </head>
   <body>
 
-    <form>
-      <button></button>
-      <button></button>
+    <form class="calculator">
+      <button class="calculator__button">Мужчина</button>
+      <button class="calculator__button">Женщина</button>
 
-      <fieldset>
-        <legend>Параметры</legend>
-        <label for="">Рост</label>
-        <input type="number" name="" id="">
-        <label for="">Вес</label>
-        <input type="number" name="" id="">
-        <label for="">Возраст</label>
-        <input type="number" name="" id="">
+      <fieldset class="calculator__parameters">
+        <legend class="calculator__parameters-title">Параметры</legend>
+
+        <label class="calculator__parameters-subtitle" for="height">Рост</label>
+        <input class="calculator__parameters-input" type="number" name="height" id="height">
+
+        <label class="calculator__parameters-subtitle" for="weight">Вес</label>
+        <input class="calculator__parameters-input" type="number" name="weight" id="weight">
+
+        <label class="calculator__parameters-subtitle" for="age">Возраст</label>
+        <input class="calculator__parameters-input" type="number" name="age" id="age">
       </fieldset>
 
-      <fieldset>
-        <legend>Уровень активности</legend>
-        <input type="radio" name="" id="">
-        <label for="">Минимальная</label>
-        <span>Тренировок мало или они отсутствуют</span>
-        <input type="radio" name="" id="">
-        <label for="">Низкая</label>
-        <span>Лёгкие тренировки 1-3 раза в неделю или в виде эквивалента другой активности</span>
-        <input type="radio" name="" id="">
-        <label for="">Средняя</label>
-        <span>Физическая работа средней тяжести или регулярные тренировки 3-5 дней в неделю</span>
-        <input type="radio" name="" id="">
-        <label for="">Высокая</label>
-        <span>Физическая работа полный день или интенсивные тренировки 6-7 раз в неделю</span>
-        <input type="radio" name="" id="">
-        <label for="">Очень высокая</label>
-        <span>Тяжёлая физическая работа и интенсивные тренировки/занятия спортом</span>
+      <fieldset class="calculator__activity">
+        <legend class="calculator__activity-title">Уровень активности</legend>
+
+        <input class="calculator__activity-choice" type="radio" name="activity-choice" id="min" checked>
+        <label class="calculator__activity-subtitle" for="min">Минимальная</label>
+        <span class="calculator__activity-text">Тренировок мало или они отсутствуют</span>
+
+        <input class="calculator__activity-choice" type="radio" name="activity-choice" id="low">
+        <label class="calculator__activity-subtitle" for="low">Низкая</label>
+        <span class="calculator__activity-text">Лёгкие тренировки 1-3 раза в неделю или в виде эквивалента другой активности</span>
+
+        <input class="calculator__activity-choice" type="radio" name="activity-choice" id="mid">
+        <label class="calculator__activity-subtitle" for="mid">Средняя</label>
+        <span class="calculator__activity-text">Физическая работа средней тяжести или регулярные тренировки 3-5 дней в неделю</span>
+
+        <input class="calculator__activity-choice" type="radio" name="activity-choice" id="high">
+        <label class="calculator__activity-subtitle" for="high">Высокая</label>
+        <span class="calculator__activity-text">Физическая работа полный день или интенсивные тренировки 6-7 раз в неделю</span>
+
+        <input class="calculator__activity-choice" type="radio" name="activity-choice" id="very-high">
+        <label class="calculator__activity-subtitle" for="very-high">Очень высокая</label>
+        <span class="calculator__activity-text">Тяжёлая физическая работа и интенсивные тренировки/занятия спортом</span>
       </fieldset>
 
-      <fieldset disabled>
-        <legend>Результат</legend>
-        <label for="">Индекс массы тела</label>
-        <input type="number" name="" id="">
-        <label for="">Базовый метаболизм</label>
-        <input type="number" name="" id="">
-        <label for="">Норма каллорий</label>
-        <input type="number" name="" id="">
+      <fieldset class="calculator__result" disabled>
+        <legend class="calculator__result-title">Результат</legend>
+
+        <label class="calculator__result-subtitle" for="bmi">Индекс массы тела</label>
+        <input class="calculator__result-input" type="number" name="bmi" id="bmi">
+
+        <label class="calculator__result-subtitle" for="bmr">Базовый метаболизм</label>
+        <input class="calculator__result-input" type="number" name="bmr" id="bmr">
+
+        <label class="calculator__result-subtitle" for="normal">Норма каллорий</label>
+        <input class="calculator__result-input" type="number" name="normal" id="normal">
       </fieldset>
 
     </form>
