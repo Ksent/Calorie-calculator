@@ -11,20 +11,36 @@
   <body>
 
     <form class="calculator">
-      <button class="calculator__button">Мужчина</button>
-      <button class="calculator__button">Женщина</button>
+
+      <fieldset class="calculator__button">
+        <div class="calculator__button-wrapper">
+          <input class="calculator__button-toggle hidden" type="radio" name="gender" id="man" checked>
+          <label class="calculator__button-title" for="man">Мужчина</label>
+        </div>
+
+        <div class="calculator__button-wrapper calculator__button-wrapper--margin">
+          <input class="calculator__button-toggle hidden" type="radio" name="gender" id="woman">
+          <label class="calculator__button-title" for="woman">Женщина</label>
+        </div>
+      </fieldset>
 
       <fieldset class="calculator__parameters">
         <legend class="calculator__parameters-title">Параметры</legend>
 
-        <label class="calculator__parameters-subtitle" for="height">Рост</label>
-        <input class="calculator__parameters-input" type="number" name="height" id="height">
+        <div class="calculator__parameters-wrapper calculator__parameters-wrapper--one">
+          <label class="calculator__parameters-subtitle" for="age">Возраст</label>
+          <input class="calculator__parameters-input" type="number" name="age" id="age" min="0" placeholder="0">
+        </div>
 
-        <label class="calculator__parameters-subtitle" for="weight">Вес</label>
-        <input class="calculator__parameters-input" type="number" name="weight" id="weight">
+        <div class="calculator__parameters-wrapper calculator__parameters-wrapper--two">
+          <label class="calculator__parameters-subtitle" for="height">Рост</label>
+          <input class="calculator__parameters-input" type="number" name="height" id="height" min="0" placeholder="0">
+        </div>
 
-        <label class="calculator__parameters-subtitle" for="age">Возраст</label>
-        <input class="calculator__parameters-input" type="number" name="age" id="age">
+        <div class="calculator__parameters-wrapper calculator__parameters-wrapper--three">
+          <label class="calculator__parameters-subtitle" for="weight">Вес</label>
+          <input class="calculator__parameters-input" type="number" name="weight" id="weight" min="0" placeholder="0">
+        </div>
       </fieldset>
 
       <fieldset class="calculator__activity">
@@ -54,16 +70,22 @@
       <fieldset class="calculator__result" disabled>
         <legend class="calculator__result-title">Результат</legend>
 
-        <label class="calculator__result-subtitle" for="bmi">Индекс массы тела</label>
-        <input class="calculator__result-input" type="number" name="bmi" id="bmi">
+        <div class="calculator__result-wrapper calculator__result-wrapper--one">
+          <label class="calculator__result-subtitle" for="bmi">Индекс массы тела</label>
+          <input class="calculator__result-input" type="number" name="bmi" id="bmi">
+        </div>
 
-        <label class="calculator__result-subtitle" for="bmr">Базовый метаболизм</label>
-        <input class="calculator__result-input" type="number" name="bmr" id="bmr">
-
-        <label class="calculator__result-subtitle" for="normal">Норма каллорий</label>
-        <input class="calculator__result-input" type="number" name="normal" id="normal">
+        <div class="calculator__result-wrapper calculator__result-wrapper--two">
+          <label class="calculator__result-subtitle" for="bmr">Базовый метаболизм</label>
+          <input class="calculator__result-input" type="number" name="bmr" id="bmr">
+        </div>
+        
+        <div class="calculator__result-wrapper calculator__result-wrapper--three">
+          <label class="calculator__result-subtitle" for="normal">Норма каллорий</label>
+          <input class="calculator__result-input" type="number" name="normal" id="normal">
+        </div>
       </fieldset>
-
+      
     </form>
 
   </body>
