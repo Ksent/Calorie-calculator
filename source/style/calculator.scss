@@ -55,60 +55,6 @@
   }
 }
 
-.calculator__parameters {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 25px;
-  padding: 15px;
-  border: 2px solid #7fbc00;
-  border-radius: 9px;
-}
-
-.calculator__parameters-title {
-  padding: 0 5px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #7fbb00;
-}
-
-.calculator__parameters-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 12px 10px 12px;
-}
-
-.calculator__parameters-wrapper--one {
-  order: 3;
-}
-
-.calculator__parameters-wrapper--two {
-  order: 2;
-}
-
-.calculator__parameters-wrapper--three {
-  order: 1;
-}
-
-.calculator__parameters-subtitle {
-  width: 120px;
-  margin: 5px 0;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.calculator__parameters-input {
-  width: 155px;
-  height: 20px;
-  padding: 7px 10px;
-  border: 1px solid #9b9b9b;
-  border-radius: 5px;
-}
-
 .calculator__activity {
   margin-bottom: 25px;
   padding: 15px;
@@ -168,58 +114,4 @@
   margin: 5px 15px 12px 40px;
   font-size: 14px;
   color: #9b9b9b;
-}
-
-.calculator__result {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 25px;
-  padding: 15px;
-  border: 2px solid #7fbc00;
-  border-radius: 9px;
-}
-
-.calculator__result-title {
-  padding: 0 5px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #7fbb00;
-}
-
-.calculator__result-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 12px 10px 12px;
-}
-
-.calculator__result-wrapper--one {
-  order: 3;
-}
-
-.calculator__result-wrapper--two {
-  order: 2;
-}
-
-.calculator__result-wrapper--three {
-  order: 1;
-}
-
-.calculator__result-subtitle {
-  width: 120px;
-  margin: 5px 0;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.calculator__result-input {
-  width: 155px;
-  height: 20px;
-  padding: 7px 10px;
-  border: 1px solid #9b9b9b;
-  border-radius: 5px;
 }
