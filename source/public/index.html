@@ -14,12 +14,12 @@
 
       <fieldset class="calculator__button">
         <div class="calculator__button-wrapper">
-          <input class="calculator__button-toggle hidden" type="radio" name="gender" id="man" checked>
+          <input class="calculator__button-toggle hidden" type="radio" name="toggle" id="man" checked>
           <label class="calculator__button-title" for="man">Мужчина</label>
         </div>
 
         <div class="calculator__button-wrapper calculator__button-wrapper--margin">
-          <input class="calculator__button-toggle hidden" type="radio" name="gender" id="woman">
+          <input class="calculator__button-toggle hidden" type="radio" name="toggle" id="woman">
           <label class="calculator__button-title" for="woman">Женщина</label>
         </div>
       </fieldset>
@@ -29,17 +29,17 @@
 
         <div class="site-block__wrapper site-block__wrapper--one">
           <label class="site-block__subtitle" for="age">Возраст</label>
-          <input class="site-block__input" type="number" name="age" id="age" min="0" placeholder="0">
+          <input class="site-block__input" type="number" name="age" id="age" min="0" placeholder="0" required>
         </div>
 
         <div class="site-block__wrapper site-block__wrapper--two">
           <label class="site-block__subtitle" for="height">Рост</label>
-          <input class="site-block__input" type="number" name="height" id="height" min="0" placeholder="0">
+          <input class="site-block__input" type="number" name="height" id="height" min="0" placeholder="0" required>
         </div>
 
         <div class="site-block__wrapper site-block__wrapper--three">
           <label class="site-block__subtitle" for="weight">Вес</label>
-          <input class="site-block__input" type="number" name="weight" id="weight" min="0" placeholder="0">
+          <input class="site-block__input" type="number" name="weight" id="weight" min="0" placeholder="0" required>
         </div>
       </fieldset>
 
@@ -67,6 +67,10 @@
         <span class="calculator__activity-text">Тяжёлая физическая работа и интенсивные тренировки/занятия спортом</span>
       </fieldset>
 
+      <fieldset class="calculator__calculate">
+        <button class="calculator__calculate-button">Рассчитать</button>
+      </fieldset>
+
       <fieldset class="calculator__result site-block" disabled>
         <legend class="site-block__title">Результат</legend>
 
@@ -88,5 +92,6 @@
       
     </form>
 
+    <script src="js/formula.js"></script>
   </body>
 </html>
