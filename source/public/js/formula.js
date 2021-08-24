@@ -9,7 +9,9 @@ let weight = document.querySelector('#weight');
 let activityLevelChoice = document.querySelector('.calculator__activity');
 let activityLevelAll = document.querySelectorAll('.calculator__activity-choice');
 
-let resultButton = document.querySelector('.calculator__calculate-button');
+let resultButton = document.querySelector('.calculator__button-calculate');
+let clearButton = document.querySelector('.calculator__button-reset');
+
 let bmiCalories = document.querySelector('#bmi');
 let bmrCalories = document.querySelector('#bmr');
 let normalCalories = document.querySelector('#normal');
@@ -82,6 +84,13 @@ resultButton.addEventListener('click', function(evt) {
       bmiCalories.classList.add('site-block__input--hard');
     }
 
+    clearButton.classList.add('calculator__button-reset--active');
   }
 
+});
+
+clearButton.addEventListener('click', function() {
+  clearButton.classList.remove('calculator__button-reset--active');
+  bmiCalories.classList.remove('site-block__input--norm');
+  bmiCalories.classList.remove('site-block__input--hard');
 });

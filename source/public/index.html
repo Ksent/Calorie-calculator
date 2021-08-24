@@ -12,15 +12,15 @@
 
     <form class="calculator">
 
-      <fieldset class="calculator__button">
-        <div class="calculator__button-wrapper">
-          <input class="calculator__button-toggle hidden" type="radio" name="toggle" id="man" checked>
-          <label class="calculator__button-title" for="man">Мужчина</label>
+      <fieldset class="calculator__toggle">
+        <div class="calculator__toggle-wrapper">
+          <input class="calculator__toggle-switch hidden" type="radio" name="toggle" id="man" checked>
+          <label class="calculator__toggle-title" for="man">Мужчина</label>
         </div>
 
-        <div class="calculator__button-wrapper calculator__button-wrapper--margin">
-          <input class="calculator__button-toggle hidden" type="radio" name="toggle" id="woman">
-          <label class="calculator__button-title" for="woman">Женщина</label>
+        <div class="calculator__toggle-wrapper calculator__toggle-wrapper--margin">
+          <input class="calculator__toggle-switch hidden" type="radio" name="toggle" id="woman">
+          <label class="calculator__toggle-title" for="woman">Женщина</label>
         </div>
       </fieldset>
 
@@ -67,8 +67,9 @@
         <span class="calculator__activity-text">Тяжёлая физическая работа и интенсивные тренировки/занятия спортом</span>
       </fieldset>
 
-      <fieldset class="calculator__calculate">
-        <button class="calculator__calculate-button">Рассчитать</button>
+      <fieldset class="calculator__button">
+        <button class="calculator__button-calculate">Рассчитать</button>
+        <button class="calculator__button-reset" type="reset">Очистить</button>
       </fieldset>
 
       <fieldset class="calculator__result site-block" disabled>

@@ -1,0 +1,10 @@
+@mixin button {
+  width: 50%;
+  max-width: 250px;
+  height: 45px;
+  display: block;
+  padding: 0;
+  border-radius: 9px;
+  text-align: center;
+  font-size: 18px;
+}
