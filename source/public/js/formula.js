@@ -76,7 +76,7 @@ resultButton.addEventListener('click', function(evt) {
       normalCalories.value = Math.round(formulaForWoman * activityIndex);
     }
 
-    if (bmiCalories.value >= 18.50 && bmiCalories.value <= 24.99) {
+    if (bmiCalories.value >= 18.50 && bmiCalories.value <= 25) {
       bmiCalories.classList.remove('site-block__input--hard');
       bmiCalories.classList.add('site-block__input--norm');
     } else {
