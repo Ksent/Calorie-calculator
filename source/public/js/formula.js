@@ -6,15 +6,18 @@ let age = document.querySelector('#age');
 let height = document.querySelector('#height');
 let weight = document.querySelector('#weight');
  
-let activityLevelChoice = document.querySelector('.calculator__activity');
-let activityLevelAll = document.querySelectorAll('.calculator__activity-choice');
-
-let resultButton = document.querySelector('.calculator__button-calculate');
-let clearButton = document.querySelector('.calculator__button-reset');
+let activityLevelChoice = document.querySelector('.activity');
+let activityLevelAll = document.querySelectorAll('.activity__input');
 
 let bmiCalories = document.querySelector('#bmi');
 let bmrCalories = document.querySelector('#bmr');
 let normalCalories = document.querySelector('#normal');
+
+let caloriesDays = document.querySelectorAll('.calories-day');
+let weightMonths = document.querySelectorAll('.weight-month');
+
+let resultButton = document.querySelector('.calculator__button-calculate');
+let clearButton = document.querySelector('.calculator__button-count');
 
 let activityLevel = [
   {
@@ -39,19 +42,39 @@ let activityLevel = [
   },
 ];
 
+let deficitLevel = [
+  {
+    name: 'low',
+    index: 0.05,
+  },
+  {
+    name: 'mid',
+    index: 0.1,
+  },
+  {
+    name: 'high',
+    index: 0.15,
+  },
+  {
+    name: 'very-high',
+    index: 0.2,
+  },
+];
+
 let activityIndex = activityLevel[0].index;
+let i = 0;
 
 activityLevelChoice.addEventListener('click', function(evt) {
   let target = evt.target;
   
-    if (target.closest('input')) {  
-
-      for (let i = 0; i < activityLevelAll.length; i++) {
-
-        if (activityLevelAll[i] == target.closest('input')) {
-          activityIndex = activityLevel[i].index;
-        }
-
+  if (target.closest('input')) {  
+    
+    for (let i = 0; i < activityLevelAll.length; i++) {
+      
+      if (activityLevelAll[i] == target.closest('input')) {
+        activityIndex = activityLevel[i].index;
+      }
+      
       }
 
     }
@@ -62,7 +85,7 @@ resultButton.addEventListener('click', function(evt) {
   
   if (weight.value && height.value && age.value > 0) {
     evt.preventDefault();   
-
+    
     let formulaForMan = Math.round(10 * weight.value + 6.25 * height.value - 5 * age.value + 5);
     let formulaForWoman = Math.round(10 * weight.value + 6.25 * height.value - 5 * age.value - 161);
     
@@ -75,7 +98,7 @@ resultButton.addEventListener('click', function(evt) {
       bmrCalories.value = formulaForWoman;
       normalCalories.value = Math.round(formulaForWoman * activityIndex);
     }
-
+    
     if (bmiCalories.value >= 18.50 && bmiCalories.value <= 25) {
       bmiCalories.classList.remove('site-block__input--hard');
       bmiCalories.classList.add('site-block__input--norm');
@@ -83,11 +106,31 @@ resultButton.addEventListener('click', function(evt) {
       bmiCalories.classList.remove('site-block__input--norm');
       bmiCalories.classList.add('site-block__input--hard');
     }
+    
+    for (i = 0; i < deficitLevel.length; i++) {
+      let formulaDeficit = Math.round(normalCalories.value - (normalCalories.value * deficitLevel[i].index));
+      let formulaWeightLoss = ((normalCalories.value * deficitLevel[i].index * 30) / 7500).toFixed(1);
+      
+      fullTableCell(formulaDeficit, caloriesDays);
+      fullTableCell(formulaWeightLoss, weightMonths);
+    }    
 
     clearButton.classList.add('calculator__button-reset--active');
   }
-
+  
 });
+
+function fullTableCell(formula, cell) {
+
+  for (let j = 0; j < cell.length; j++) {
+        
+    if (j == i) {
+      cell[j].textContent = formula;
+    }
+
+  }
+
+}
 
 clearButton.addEventListener('click', function() {
   clearButton.classList.remove('calculator__button-reset--active');

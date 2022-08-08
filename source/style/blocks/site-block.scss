@@ -1,61 +1,79 @@
-.site-block {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
-  background-color: #ffffff;
-  border: 2px solid #7fbc00;
-  border-radius: 9px;
-}
+// .site-block {
+//   margin: 0;
+//   padding: 15px;
+//   // display: grid;
+//   // grid-template-columns: repeat(3, minmax(72px, 1fr));
+//   // grid-gap: 12px;
+//   // display: flex;
+//   // flex-direction: row-reverse;
+//   // flex-wrap: wrap-reverse;
+//   // justify-content: space-around;
+//   // align-items: flex-end;
+//   background-color: #ffffff;
+//   border: 2px solid #7fbc00;
+//   border-radius: 9px;
+// }
 
-.site-block__title {
-  padding: 0 5px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #7fbb00;
-}
+// .site-block__title {
+//   padding: 0 5px;
+//   font-size: 22px;
+//   font-weight: bold;
+//   color: #7fbb00;
+// }
 
 .site-block__wrapper {
+  margin: 0 12px 12px 12px;
+  // margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 12px 10px 12px;
 }
 
-.site-block__wrapper--one {
-  order: 3;
-}
+// .site-block__wrapper--one {
+//   order: 3;
+// }
 
-.site-block__wrapper--two {
-  order: 2;
-}
+// .site-block__wrapper--two {
+//   order: 2;
+// }
 
-.site-block__wrapper--three {
-  order: 1;
-}
+// .site-block__wrapper--three {
+//   order: 1;
+// }
 
 .site-block__subtitle {
-  width: 120px;
+  // width: 120px;
   margin: 5px 0;
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
+  // text-align: center;
 }
 
 .site-block__input {
-  width: 140px;
+  width: 90%;
+  // min-width: 37px;
+  max-width: 220px;
   height: 20px;
-  padding: 7px 10px 7px 25px;
+  padding: 7px 10px;
+  // text-align: center;
+  color: #535353;
   background-color: #ffffff;
   border: 1px solid #9b9b9b;
   border-radius: 5px;
-  text-align: center;
-  color: #535353;
   &:focus {
-    outline-color: #7fbb00;
+    outline: none;
+    border: 1px solid #7fbc00;
   }
+}
+
+.site-block__input--align {
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.site-block__input--align::-webkit-inner-spin-button,
+.site-block__input--align::-webkit-outer-spin-button {
+  appearance: none;
 }
 
 .site-block__input--norm {

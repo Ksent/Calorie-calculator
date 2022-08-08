@@ -1,0 +1,51 @@
+.calorie {
+  margin-top: 25px;
+}
+
+.calorie__table {
+  margin: 12px auto;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #9b9b9b;
+  // border-collapse: collapse;
+}
+
+// .calorie__table-head {
+//   font-size: 18px;
+// }
+
+.calorie__table-body {
+  font-size: 14px;
+  text-align: center;
+  color: #9b9b9b;
+}
+
+.calorie__table-row > .calorie__table-cell:last-child {
+  border-right: none;
+}
+
+.calorie__table-row:last-child > td {
+  border-bottom: none;
+}
+
+.calorie__table-cell {
+  padding: 5px;
+  // border-radius: 5px;
+  border: 1px solid #9b9b9b;
+  border-top: none;
+  border-left: none;
+}
+
+@media (min-width: 370px) {
+  .calorie__table-cell {
+    padding: 10px;
+  }
+}
+
+.calorie__table-cell--norm {
+  color: #7fbb00;
+}
+
+.calorie__table-cell--hard {
+  color: #e2574c;
+}
