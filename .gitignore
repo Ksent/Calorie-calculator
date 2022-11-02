@@ -4,6 +4,5 @@ gulpfile.js
 webpack.*config.js
 node_modules/
 *.json
-app/
-dist/
+js/
 *.code-workspace
