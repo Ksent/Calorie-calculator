@@ -20,8 +20,7 @@ function App() {
         <Route 
           path="/public/index.html/result" 
           element={location.state ? <Result /> : <Navigate to="/" />} 
-        >
-        </Route>
+        />
         <Route 
           path="*" 
           element={<pre> Ресурс не найден</pre>} 

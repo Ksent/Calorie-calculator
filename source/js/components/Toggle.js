@@ -45,7 +45,7 @@ function Toggle() {
       </label>
 
     </fieldset>
-  );  
+  );
 }
 
 export default Toggle;

@@ -4,15 +4,10 @@
 
 .calorie__table {
   margin: 12px auto;
-  background-color: #ffffff;
-  border-radius: 5px;
   border: 1px solid #9b9b9b;
-  // border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
-
-// .calorie__table-head {
-//   font-size: 18px;
-// }
 
 .calorie__table-body {
   font-size: 14px;
@@ -30,7 +25,6 @@
 
 .calorie__table-cell {
   padding: 5px;
-  // border-radius: 5px;
   border: 1px solid #9b9b9b;
   border-top: none;
   border-left: none;

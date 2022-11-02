@@ -18,7 +18,7 @@ function Calorie(props) {
             <th className="calorie__table-cell">%</th>
             <th className="calorie__table-cell">Ккал/сутки</th>
             <th className="calorie__table-cell">Кг/месяц</th>
-          </tr>            
+          </tr>
         </thead>
 
         <tbody className="calorie__table-body">

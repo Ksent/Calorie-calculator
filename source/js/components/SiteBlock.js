@@ -3,7 +3,7 @@ import SiteItem from './SiteItem';
 
 function SiteBlock(props) {
   const blockList = props.items.map(item => (
-    <SiteItem key={item.id} align={item.align} color={item.color} forName={item.forName} name={item.name} min={item.min} placeholder={item.placeholder} default={item.default} required={item.required} />
+    <SiteItem key={item.id} forName={item.forName} name={item.name} align={item.align} color={item.color} min={item.min} placeholder={item.placeholder} default={item.default} required={item.required} />
   ));
 
   return (
