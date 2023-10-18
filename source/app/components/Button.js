@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Button(props) {
+function Button({ className, text }) {
   return (
     <fieldset className="calculator__button">
-      <button className={props.className + " button"}>{props.name}</button>
+      <button className={className + " button"}>
+        {text}
+      </button>
     </fieldset>
   );
 }

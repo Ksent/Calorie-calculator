@@ -1,12 +1,12 @@
 import React from 'react';
 
-function TableCell(props) {
+function TableCell({ color, rowSpan, text }) {
   return (
     <td 
-      className={"calorie__table-cell" + (props.color ? props.color : '')} 
-      rowSpan={props.rowSpan}
+      className={"calorie__table-cell" + (color ? color : '')} 
+      rowSpan={rowSpan}
     >
-      {props.name}
+      {text}
     </td>
   );
 };

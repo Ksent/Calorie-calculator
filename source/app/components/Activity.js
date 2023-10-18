@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Activity(props) {
+function Activity({ items }) {
   const [value, setValue] = useState(1.2);
 
   function checkActivity(e) {
@@ -9,10 +9,15 @@ function Activity(props) {
 
   return (
     <fieldset className="calculator__section activity">
-      <legend className="calculator__section-title activity__title">Уровень активности</legend>
+      <legend className="calculator__section-title activity__title">
+        Уровень активности
+      </legend>
         
-      {props.items.map(item => (
-        <div className="activity__wrapper" key={item.id}>
+      {items.map(item => (
+        <div 
+          className="activity__wrapper" 
+          key={item.id}
+        >
           <input 
             className="activity__input" 
             type="radio" 
@@ -29,9 +34,12 @@ function Activity(props) {
           >
             {item.subtitle}
           </label>
-          <span className="activity__text">{item.text}</span>
+          <span className="activity__text">
+            {item.text}
+          </span>
         </div>
       ))}
+
     </fieldset>
   );
 }

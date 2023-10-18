@@ -10,9 +10,9 @@ function Home() {
   const navigate = useNavigate();
 
   const optionData = [
-    {id: 1, forName: 'age', name: 'Возраст', min: 0, placeholder: 0, required: true},
-    {id: 2, forName: 'height', name: 'Рост', min: 0, placeholder: 0, required: true},
-    {id: 3, forName: 'weight', name: 'Вес', min: 0, placeholder: 0, required: true},
+    {id: 1, forName: 'age', text: 'Возраст', min: 0, placeholder: 0, required: true},
+    {id: 2, forName: 'height', text: 'Рост', min: 0, placeholder: 0, required: true},
+    {id: 3, forName: 'weight', text: 'Вес', min: 0, placeholder: 0, required: true},
   ];
 
   const activityData = [
@@ -65,7 +65,7 @@ function Home() {
       <Activity items={activityData} />
       <Button 
         className='calculator__button-calculate'
-        name='Рассчитать' 
+        text='Рассчитать' 
       />
     </form>
   );
