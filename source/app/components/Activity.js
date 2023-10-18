@@ -22,11 +22,11 @@ function Activity(props) {
             autoComplete="off" 
             checked={(value == item.value ? true : false)}
             onChange={checkActivity}
-            />
+          />
           <label 
             className="activity__subtitle"
             htmlFor={item.forName}
-            >
+          >
             {item.subtitle}
           </label>
           <span className="activity__text">{item.text}</span>

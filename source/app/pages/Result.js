@@ -34,7 +34,11 @@ function Result() {
       method="post" 
       onSubmit={returnForm}
     >
-      <SiteBlock items={resultData} disabled={true} title='Результат' />
+      <SiteBlock 
+        items={resultData} 
+        disabled={true} 
+        title='Результат' 
+      />
       <Calorie cells={tableData} />
       <Button 
         className='calculator__button-count'

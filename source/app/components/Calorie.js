@@ -4,7 +4,15 @@ import TableRow from './TableRow';
 
 function Calorie(props) {
   const tableList = props.cells.map(cell => (
-    <TableRow key={cell.id} showCell={cell.showCell} color={cell.color} rowSpan={cell.rowSpan} name={cell.name} number={cell.number} deficit={cell.deficit} />
+    <TableRow 
+      key={cell.id} 
+      showCell={cell.showCell} 
+      color={cell.color} 
+      rowSpan={cell.rowSpan} 
+      name={cell.name} 
+      number={cell.number} 
+      deficit={cell.deficit} 
+    />
   ));
 
   return (

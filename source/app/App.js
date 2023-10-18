@@ -12,7 +12,10 @@ function App() {
     <div>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route 
+          path="/" 
+          element={<Home />} 
+        />
         <Route 
           path="/public/index.html" 
           element={<Home />} 

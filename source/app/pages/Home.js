@@ -58,7 +58,10 @@ function Home() {
       onSubmit={calculateForm}
     >
       <Toggle />
-      <SiteBlock items={optionData} title='Параметры' />
+      <SiteBlock 
+        items={optionData} 
+        title='Параметры' 
+      />
       <Activity items={activityData} />
       <Button 
         className='calculator__button-calculate'
