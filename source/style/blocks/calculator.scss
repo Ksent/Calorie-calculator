@@ -1,8 +1,8 @@
 .calculator {
   width: 85%;
   max-width: 500px;
-  margin: 3% auto;
-  padding: 40px 4.5%;
+  margin: 0.5% auto;
+  padding: 25px 4.5%;
   border-radius: 9px;
   background-color: #ffffff;
   background-image: url(../img/back-icon.jpg);
@@ -15,6 +15,7 @@
 .calculator__toggle {
   margin: 0;
   padding: 0;
+  padding-top: 9px;
   padding-bottom: 25px;
   display: flex;
   justify-content: space-around;
@@ -66,7 +67,8 @@
   max-width: 600px;
   margin: 0;
   padding: 0;
-  padding-top: 40px;
+  padding-top: 34px;
+  padding-bottom: 9px;
   border: none;
 }
 
