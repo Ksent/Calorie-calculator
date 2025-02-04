@@ -48,7 +48,7 @@ function Home() {
       normalCalories = Math.round(formulaForWoman * activityLevel);
     }
     
-    navigate('/public/index.html/result', { state: { bmi : bmiCalories, bmr : bmrCalories, normal : normalCalories } });
+    navigate('/result', { state: { bmi : bmiCalories, bmr : bmrCalories, normal : normalCalories } });
   }
 
   return (
