@@ -1,12 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import usePrivate from '../hook/usePrivate';
 import Toggle from '../components/Toggle';
 import SiteBlock from '../components/SiteBlock';
 import Activity from '../components/Activity';
 import Button from '../components/Button';
 
 function Home() {
+  const { isPrivateOn } = usePrivate();
   const navigate = useNavigate();
 
   const optionData = [
@@ -47,8 +49,8 @@ function Home() {
       bmrCalories = formulaForWoman;
       normalCalories = Math.round(formulaForWoman * activityLevel);
     }
-    
-    navigate('/result', { state: { bmi : bmiCalories, bmr : bmrCalories, normal : normalCalories } });
+
+    isPrivateOn(bmiCalories, bmrCalories, normalCalories, () => navigate('/result', { replace: true }));
   }
 
   return (

@@ -1,18 +1,22 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
+import usePrivate from '../hook/usePrivate';
 import Calorie from '../components/Calorie';
 import SiteBlock from '../components/SiteBlock';
 import Button from '../components/Button';
 
 function Result() {
+  const { bmi } = usePrivate();
+  const { bmr } = usePrivate();
+  const { normal } = usePrivate();
+  const { isPrivateOff } = usePrivate();
   const navigate = useNavigate();
-  const location = useLocation();
 
   const resultData = [
-    {id: 1, forName: 'bmi', text: 'Индекс массы тела', align: ' site-block__input--align', color: true, defaultValue: location.state.bmi},
-    {id: 2, forName: 'bmr', text: 'Базовый метаболизм', align: ' site-block__input--align', defaultValue: location.state.bmr},
-    {id: 3, forName: 'normal', text: 'Норма калорий', align: ' site-block__input--align', defaultValue: location.state.normal},
+    {id: 1, forName: 'bmi', text: 'Индекс массы тела', align: ' site-block__input--align', color: true, defaultValue: bmi},
+    {id: 2, forName: 'bmr', text: 'Базовый метаболизм', align: ' site-block__input--align', defaultValue: bmr},
+    {id: 3, forName: 'normal', text: 'Норма калорий', align: ' site-block__input--align', defaultValue: normal},
   ];
 
   const tableData = [
@@ -24,8 +28,8 @@ function Result() {
   
   function returnForm(e) {
     e.preventDefault();
-
-    navigate('/', location.pathname);
+    
+    isPrivateOff(() => navigate('/', { replace: true }))
   }
 
   return (

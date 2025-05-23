@@ -1,24 +1,15 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 
+import RouteProvider from './hoc/RouteProvider';
+import PrivateRoute from './hoc/PrivateRoute';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Result from './pages/Result';
 
 function App() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-
-    if (!location.state) {
-      navigate('/');
-    }
-
-  }, [location.pathname]);
-
   return (
-    <div>
+    <RouteProvider>
       <ScrollToTop />
       <Routes>
         <Route 
@@ -31,10 +22,14 @@ function App() {
         />
         <Route 
           path="/result" 
-          element={location.state ? <Result /> : <Navigate to="/" />} 
+          element={
+            <PrivateRoute>
+              <Result />
+            </PrivateRoute>
+          }
         />
       </Routes>
-    </div>
+    </RouteProvider>
   );
 }
 

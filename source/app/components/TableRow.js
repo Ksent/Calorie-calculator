@@ -1,6 +1,6 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 
+import usePrivate from '../hook/usePrivate';
 import TableCell from './TableCell';
 
 function TableRow({ 
@@ -11,7 +11,7 @@ function TableRow({
   number, 
   deficit 
 }) {
-  const location = useLocation();
+  const { normal } = usePrivate();
   
   return (
     <tr className="calorie__table-row">
@@ -26,10 +26,10 @@ function TableRow({
         {number}
       </td>
       <td className="calorie__table-cell">
-        {Math.round(location.state.normal - (location.state.normal * deficit))}
+        {Math.round(normal - (normal * deficit))}
       </td>
       <td className="calorie__table-cell">
-        {((location.state.normal * deficit * 30) / 7500).toFixed(1)}
+        {((normal * deficit * 30) / 7500).toFixed(1)}
       </td>
     </tr>
   );

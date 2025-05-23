@@ -1,5 +1,6 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+
+import usePrivate from '../hook/usePrivate';
 
 function SiteItem({ 
   forName, 
@@ -11,7 +12,7 @@ function SiteItem({
   defaultValue, 
   required 
 }) {
-  const location = useLocation();
+  const { bmi } = usePrivate();
   
   return (
     <div className="site-block__wrapper">
@@ -22,7 +23,7 @@ function SiteItem({
         {text}
       </label>
       <input 
-        className={"site-block__input" + (align ? align : '') + (color ? (location.state.bmi >= 18.50 && location.state.bmi <= 25 ? ' site-block__input--norm' : ' site-block__input--hard') : '')} 
+        className={"site-block__input" + (align ? align : '') + (color ? (bmi >= 18.50 && bmi <= 25 ? ' site-block__input--norm' : ' site-block__input--hard') : '')} 
         type="number" 
         name={forName} 
         id={forName} 
